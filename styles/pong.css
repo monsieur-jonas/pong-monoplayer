@@ -2,12 +2,12 @@ html{
     margin: 0;
     padding:0;
     overflow: hidden;
-    --couleur-fond:#000;
-    --couleur-elements:#FFF;
+    --couleur-fond:#ffffff;
+    --couleur-elements:rgb(247, 0, 255);
     --couleur-on-sait-pas-trop:#808080;
     --couleur-on-sait-pas-trop-foncee:#222;
     --couleur-erreur:#F00;
-    --couleur-succes:#0f0;
+    --couleur-succes:rgb(51, 255, 0);
 }
 body{
     background-color: var(--couleur-fond);
@@ -49,7 +49,7 @@ body{
 
 .balle{
     transition: color 2s;
-    background-color: #fff;
+    background-color: rgb(247, 0, 255);
     --diamettre:20px;
     width: var(--diamettre);
     height: var(--diamettre);
@@ -60,12 +60,13 @@ body{
 
 .raquette{
     --hauteur:25%;
-    background-color: #fff;
-    width: 10px;
+    background-color:rgb(247, 0, 255);
+    width: 12px;
     height:var(--hauteur);
     outline: 1px solid var(--couleur-fond);
     outline-offset: -1px;
     top:calc( 50% - var(--hauteur) / 2  );
+    border-radius: 5px;
 }
 .raquette.joueur1{
     left: 0;
@@ -75,7 +76,7 @@ body{
 }
 
 .raquette.touche-balle{
-    background-color: #0f0;
+    background-color: rgb(113, 0, 165);
 }
 .raquette.rate-balle{
     background-color: var(--couleur-erreur);
@@ -88,9 +89,9 @@ body{
 /** les scores des joueurs **/
 .score{
     top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
+    left: 10%;
+    width: 20%;
+    height: 250%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -105,7 +106,7 @@ body{
 
 
 
-/** les boutons qui symbolisent les touches du clavier **/
+/** les boutons qui symbolisent les touches du clavier 
 .touche{
     color: var(--couleur-on-sait-pas-trop);
     display: flex;
@@ -130,7 +131,7 @@ body{
 .touche.right{
     right: -40px;
 }
-
+**/
 .ecran-debut{
     transition: all 3s;
     box-sizing: border-box;
@@ -189,6 +190,4 @@ body{
         transform: rotate(-90deg);
     }
 }
-
-
 

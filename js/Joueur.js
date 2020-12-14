@@ -116,14 +116,13 @@ class Joueur extends ElementHtml{
         ElementHtml.effetCss(this.$score,"flash");
     }
     /**
-     * Appelé quand le joueur gagne un échange
+     * Appelé quand la balle touche la raquette
      */
     gagne(){
         //on aumente son score
         this.incrementeScore(10);
         this._rafraichitHTML();
         audio.fausseNote();
-        terrain.tilt();
         partie.demarreNouveauJeu();
     }
     /**

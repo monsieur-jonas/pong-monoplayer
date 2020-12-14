@@ -17,18 +17,15 @@ class Controles {
             if (event.defaultPrevented) {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
             }
-            if(event.key === "a"){
+            if(event.key === "h"){
                 joueur1.monte();
-            }
-            if(event.key === "q"){
-                joueur1.descend();
-            }
-            if(event.key === "p"){
-                joueur2.monte();
-            }
-            if(event.key === "m"){
                 joueur2.descend();
             }
+            if(event.key === "b"){
+                joueur1.descend();
+                joueur2.monte();
+            }
+            
             event.preventDefault(); // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
         }, true);
 
@@ -38,16 +35,15 @@ class Controles {
             if (event.defaultPrevented) {
                 return; // je n'explique pas à quoi ça sert ça vous embrouillerait pour rien
             }
-            switch (event.key) {
-                case "a":
-                case "q":
-                    joueur1.bougePas()
-                    break;
-                case "p":
-                case "m":
-                    joueur2.bougePas()
-                    break;
+            if (event.key === "h"){
+                joueur1.bougePas()
+                joueur2.bougePas()
             }
+            if (event.key === "b"){
+                joueur2.bougePas()
+                joueur1.bougePas()
+            }
+            
             event.preventDefault(); // je n'explique pas à quoi ça sert ça vous embrouillerait sans raison
         }, true);
     }
